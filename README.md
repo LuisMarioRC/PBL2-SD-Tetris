@@ -175,16 +175,13 @@ Cada linha eliminada aumenta a pontuação em 100 pontos, e a velocidade de qued
 6. Controle de Queda e Atraso:<br>
 A função fallDelay define o tempo de espera entre cada "queda" automática da peça, inicialmente em 80ms.
 Esse tempo diminui conforme mais linhas são completadas, acelerando o ritmo do jogo e aumentando a dificuldade.
-7. Pontuação e Exibição de Informações:<br>
-O jogo exibe a pontuação e o número de linhas completadas diretamente na tela via interface VGA, utilizando a função video_text.
-As informações são atualizadas em tempo real, assim como a visualização do tabuleiro e das peças.
-8. Thread para Leitura do Acelerômetro:<br>
+7. Thread para Leitura do Acelerômetro:<br>
 A leitura do valor do eixo X do acelerômetro é feita em uma thread separada, que atualiza o valor continuamente enquanto o jogo está em execução.
 Isso permite que a movimentação das peças ocorra de forma fluida, sem interromper o fluxo principal do jogo.
-9. Pause e Game Over:<br>
+8. Pause e Game Over:<br>
 O jogador pode pausar o jogo a qualquer momento pressionando o botão 2, que exibe uma mensagem de pausa na tela e suspende o jogo até que o botão seja pressionado novamente.
 Quando não há mais espaço para posicionar uma nova peça, o jogo exibe a mensagem de Game Over e termina.
-10. Gerenciamento da Memória das Peças:<br>
+9. Gerenciamento da Memória das Peças:<br>
 As peças são geradas dinamicamente através da função CopyShape, que faz uma cópia da peça original.
 Ao rotacionar ou descartar uma peça, a memória alocada é liberada usando a função DeleteShape para evitar vazamento de memória.
 
